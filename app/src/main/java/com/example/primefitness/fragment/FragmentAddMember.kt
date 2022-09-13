@@ -91,6 +91,8 @@ class FragmentAddMember : Fragment() {
 
         }
 
+
+
 //        binding.spMembership.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
 //            override fun onItemSelected(
 //                parent: AdapterView<*>?,
@@ -153,6 +155,7 @@ class FragmentAddMember : Fragment() {
                 }
             }
         }
+
 
         binding.btnAddMemberSave.setOnClickListener {
 
@@ -444,7 +447,13 @@ class FragmentAddMember : Fragment() {
             1 -> if (resultCode == RESULT_OK) {
                 val selectedImage = imageReturnedIntent?.data
                 binding.imgPic.setImageURI(selectedImage)
-                captureImage(captureImage?.getRightAngleImage(captureImage?.getPath(imageReturnedIntent?.data, context)).toString()
+                captureImage(
+                    captureImage?.getRightAngleImage(
+                        captureImage?.getPath(
+                            imageReturnedIntent?.data,
+                            context
+                        )
+                    ).toString()
                 )
             }
             2 -> if (resultCode == RESULT_OK) {
@@ -458,7 +467,12 @@ class FragmentAddMember : Fragment() {
                 val selectedImage = imageReturnedIntent?.data
                 binding.imgIDPic1.setImageURI(selectedImage)
                 captureImageID1(
-                    captureImageID1?.getRightAngleImage(captureImageID1?.getPath(imageReturnedIntent?.data, context)).toString()
+                    captureImageID1?.getRightAngleImage(
+                        captureImageID1?.getPath(
+                            imageReturnedIntent?.data,
+                            context
+                        )
+                    ).toString()
                 )
             }
             4 -> if (resultCode == RESULT_OK) {
@@ -472,7 +486,12 @@ class FragmentAddMember : Fragment() {
                 val selectedImage = imageReturnedIntent?.data
                 binding.imgIDPic2.setImageURI(selectedImage)
                 captureImageID2(
-                    captureImageID2?.getRightAngleImage(captureImageID2?.getPath(imageReturnedIntent?.data, context)).toString()
+                    captureImageID2?.getRightAngleImage(
+                        captureImageID2?.getPath(
+                            imageReturnedIntent?.data,
+                            context
+                        )
+                    ).toString()
                 )
             }
         }
